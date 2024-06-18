@@ -1,0 +1,14 @@
+
+.dialogg{
+    backdrop-filter: blur(10px) ;
+    background-color: aqua;
+
+}
+.dialog-img{
+    width: 600px;
+    height: auto;
+}
+.dialog-p{
+    width: 600px;
+    height: auto;
+}

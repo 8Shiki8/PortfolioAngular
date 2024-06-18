@@ -1,0 +1,69 @@
+.bi-sun-fill {
+   
+    animation: sunAni 0.3s 1 linear;
+}
+
+.bi-moon-fill {
+   
+    animation: moonAni 0.3s 1 linear;
+}
+.toggle-container{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.textTitle{
+    font-size: 40px;
+    text-shadow: 0px 0px 1px black, 0px 0px 0px white, 0px 0px 0px white ;
+    animation: titleAni  2s  infinite  alternate-reverse;
+}
+.icon-logo{
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+}
+.menu-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container-a{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.container-b{
+    display: flex;
+    justify-content: space-evenly;
+}
+@keyframes sunAni {
+    0% {
+        filter: blur(5px)
+    }
+
+    100% {
+        filter: blur(0%)
+    }
+}
+
+@keyframes moonAni {
+    0% {
+        filter: blur(5px)
+    }
+
+    100% {
+        filter: blur(0px)
+    }
+}
+@keyframes titleAni {
+    0%{
+    text-shadow: 0px 0px 2px black ,0px 0px 0px white, 0px 0px 0px white;
+    }
+    
+    100%{
+    text-shadow: 0px 0px 2px black ,0px 0px 10px white, 0px 0px 5px white;
+    }
+    
+}

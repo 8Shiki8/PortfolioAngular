@@ -1,0 +1,168 @@
+
+.hero-container {
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 0.5;
+}
+
+.hero {
+    display: inline-block;
+    width: 1000vw;
+    animation: hero-mover 10s infinite linear alternate;
+}
+h1.textTitle{
+    text-shadow: 6px 6px 6px black;
+}
+.textTitle {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    height: 120px;
+    line-height: normal;
+    font-size: 6rem;
+    z-index: 1;
+ 
+    pointer-events: none;
+    color: white;
+    animation: titleAni 1s infinite alternate-reverse;
+}
+
+
+.portrait {
+    background-color: black;
+    width: 200px;
+    height: 800px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.hero-img {
+
+    position: relative;
+    height: 800px;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: .2s linear;
+    left: -160px;
+    opacity: 0.5;
+}
+
+.hero-img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/**/
+.hero2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    overflow: hidden;
+    margin-top: 20%;
+  
+}
+
+.title-hero {
+    display: block;
+    text-align: center !important;
+    /* pointer-events: none; */
+   
+}
+
+
+.hero-button {
+    background-color: #1a4874;
+    color: var(--title-color1);
+    width: fit-content;
+    padding: 0 20px;
+
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.textTitle2 {
+    color: var(--title-color2);
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-image: linear-gradient(to right, #f08800, #ee04da);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+}
+.info {
+    margin-top: 80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info-wrapper {
+    color: white;
+    position: relative;
+    margin: 40px;
+    border-radius: 20px;
+    background-color: #414141 !important;
+    padding: 10px;
+}
+
+
+.info-text>img {
+    border-radius: 20px;
+    object-fit: scale-down;
+    max-width: 300px;
+}
+
+.subtitle {
+    font-family: var(--text);
+    color: var(--title-color2);
+    font-size: 1.5rem;
+    margin: 4px;
+}
+.parrafoMain{
+    text-align: justify;
+}
+.acerca-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.acerca{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end ;
+    align-items:center;
+    width:1200px;
+    height: 700px;
+    background-image: url("../../../assets/img/Acerca de.webp");
+    background-position: center;
+        /* Centra la imagen */
+    border-radius: 2%;
+    text-align: center;
+   
+}
+.acerca-parrafo{
+    margin: 25px;
+    text-align: left;
+    width: 800px;
+    color:white;
+    background-color: #000000ab;
+ 
+    
+}
+main{
+    background-color: #1b1b1b;
+
+}

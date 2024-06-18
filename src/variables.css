@@ -1,0 +1,46 @@
+
+:root{
+    --bg-color: #2e2b2b;
+    --title-color1: #ffffff;
+    --title-color2: #3b94e7;
+    --font-color: white;
+    --header-color: #0c1d36;
+    --modo-help: "light mode";
+    
+
+}
+
+.textNormal{
+  
+        font-family: 'Raleway', sans-serif !important;
+}
+.textTitle{
+        font-family: "Poppins", sans-serif;
+      font-weight:bold !important;
+}
+body{
+    background-color: #252525;
+    color: var(--font-color);
+    overflow-x: hidden;
+ 
+}
+.dialogg {
+    backdrop-filter: blur(15px);
+    background-color: #00000063;
+    height: 1500px;
+
+}
+.custom-snackbar {
+    color: red !important;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+.dark-theme{
+    transition: background-color 0.5s linear,color 0.5s linear ;
+}
+.light-theme{
+    transition: background-color 0.5s linear, color 0.5s linear;
+}

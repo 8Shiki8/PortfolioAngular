@@ -1,0 +1,29 @@
+.bi-sun-fill {
+
+    animation: sunAni 0.3s 1 linear;
+}
+
+.bi-moon-fill {
+
+    animation: moonAni 0.3s 1 linear;
+}
+
+@keyframes sunAni {
+    0% {
+        filter: blur(5px)
+    }
+
+    100% {
+        filter: blur(0%)
+    }
+}
+
+@keyframes moonAni {
+    0% {
+        filter: blur(5px)
+    }
+
+    100% {
+        filter: blur(0px)
+    }
+}

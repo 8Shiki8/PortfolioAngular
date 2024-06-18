@@ -1,0 +1,36 @@
+<div>
+    <div id="reemplazable">
+        <h2 mat-dialog-title>{{data.game.nombre}}</h2>
+        <mat-dialog-content class="mat-typography">
+            <h3>{{data.game.descripcion}}</h3>
+
+            <img class="dialog-img" src={{data.game.imagen}} alt="">
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                <mat-tab label="Sinopsis"></mat-tab>
+            </mat-tab-group>
+            <p class="dialog-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatum
+                perferendis,
+                voluptatem adipisci
+                earum, animi sed eaque magni non dolore explicabo modi rem. Molestias ut optio minus, mollitia fuga
+                sunt!
+                Nobis, adipisci. Doloribus odit excepturi quaerat est itaque facilis, fugit quod debitis, architecto,
+                sit
+                adipisci nisi? Ab eaque tempore repudiandae possimus maxime ea, quis in quae commodi voluptatibus
+                tenetur
+                doloremque!</p>
+            <label for="">Categoria:</label>
+            <span *ngFor="let elem of data.game.categoria">
+                <mat-chip mat-mdc-basic-chip>{{elem}}</mat-chip>
+            </span>
+            <br>
+            <label for="">Precio:</label><span>${{data.game.precio}}</span>
+
+
+        </mat-dialog-content>
+
+    </div>
+
+    <mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cerrar</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,35 @@
+.card-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    
+}
+.example-card {
+    max-width: 300px;
+    margin-bottom: 20px;
+    
+}
+.img-juego{
+    margin:20px
+}
+.input-number{
+    width: 120px;
+}
+
+mat-card-content{
+    display: flex;
+    flex-direction: column;
+    /* Dirección de los elementos (puede ser row o column) */
+    align-items: center;
+}
+.elem-card{
+    margin:5px;
+}
+.label-precio{
+    font-weight: bold;
+}
+.card-precio{
+    color:#0cc90c;
+    font-weight: bold;
+}
