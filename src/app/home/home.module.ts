@@ -8,9 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [InicioComponent],
-  imports: [CommonModule, HomeRoutingModule, FormsModule, SharedModule,MatButtonModule],
-
-  exports: [InicioComponent],
+    imports: [CommonModule, HomeRoutingModule, FormsModule, SharedModule, MatButtonModule, InicioComponent],
+    exports: [InicioComponent],
 })
 export class HomeModule {}

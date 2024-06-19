@@ -13,20 +13,20 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TiendaRoutingModule } from './tienda-routing.module';
 
 @NgModule({
-  declarations: [JuegosComponent],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSnackBarModule,
-    TiendaRoutingModule,
-  ],
-  exports: [JuegosComponent],
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSnackBarModule,
+        TiendaRoutingModule,
+        JuegosComponent,
+    ],
+    exports: [JuegosComponent],
 })
 export class TiendaModule {}

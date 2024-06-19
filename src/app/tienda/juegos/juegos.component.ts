@@ -6,22 +6,31 @@ import { OnSameUrlNavigation } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { Carrito } from 'src/app/models/carrito';
-import {
-  FormBuilder,
-  FormControl,
-  FormArray,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormArray, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from 'src/app/services/shared.service';
 import { CompraDTO } from 'src/app/models/compraDTO';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSnackBarConfig } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-juegos',
-  templateUrl: './juegos.component.html',
-  styleUrls: ['./juegos.component.css'],
+    selector: 'app-juegos',
+    templateUrl: './juegos.component.html',
+    styleUrls: ['./juegos.component.css'],
+    standalone: true,
+    imports: [
+        NgFor,
+        MatCardModule,
+        FormsModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+    ],
 })
 export class JuegosComponent implements OnInit {
   @Output() dataCantidades = new EventEmitter<FormGroup>();

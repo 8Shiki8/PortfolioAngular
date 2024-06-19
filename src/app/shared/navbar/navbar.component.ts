@@ -14,11 +14,24 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { DOCUMENT } from '@angular/common';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css'],
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.css'],
+    standalone: true,
+    imports: [
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatBadgeModule,
+        MatSlideToggleModule,
+    ],
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   cantidad: number = 0;
