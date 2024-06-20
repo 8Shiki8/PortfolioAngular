@@ -1,98 +1,104 @@
-@import '@angular/material/theming';
+@use '@angular/material' as mat;
 
-@include mat-core();
+@include mat.core();
+// Definir paletas de colores personalizadas
+$my-primary-color:mat.define-palette( (
+    50 : #e4e4e4,
+    100 : #bcbcbc,
+    200 : #8f8f8f,
+    300 : #626262,
+    400 : #404040,
+    500 : #1e1e1e,
+    600 : #1a1a1a,
+    700 : #161616,
+    800 : #121212,
+    900 : #0a0a0a,
+    A100 : #e07171,
+    A200 : #d74747,
+    A400 : #eb0000,
+    A700 : #d10000,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    ))
+);
 
-// GAMA COLORES
-$my-primary-color:    (50 : #e4e4e4,
-       100 : #bcbcbc,
-       200 : #8f8f8f,
-       300 : #626262,
-       400 : #404040,
-       500 : #1e1e1e,
-       600 : #1a1a1a,
-       700 : #161616,
-       800 : #121212,
-       900 : #0a0a0a,
-       A100 : #e07171,
-       A200 : #d74747,
-       A400 : #eb0000,
-       A700 : #d10000,
-       contrast: (50 : #000000,
-           100 : #000000,
-           200 : #000000,
-           300 : #ffffff,
-           400 : #ffffff,
-           500 : #ffffff,
-           600 : #ffffff,
-           700 : #ffffff,
-           800 : #ffffff,
-           900 : #ffffff,
-           A100 : #000000,
-           A200 : #ffffff,
-           A400 : #ffffff,
-           A700 : #ffffff,
-       ));
-
-$my-accent-color:   (50 : #f6f6f6,
-      100 : #e9e9e9,
-      200 : #dbdbdb,
-      300 : #cccccc,
-      400 : #c1c1c1,
-      500 : #b6b6b6,
-      600 : #afafaf,
-      700 : #a6a6a6,
-      800 : #9e9e9e,
-      900 : #8e8e8e,
-      A100 : #ffffff,
-      A200 : #fef6f6,
-      A400 : #ffc2c2,
-      A700 : #ffa8a8,
-      contrast: (50 : #000000,
-          100 : #000000,
-          200 : #000000,
-          300 : #000000,
-          400 : #000000,
-          500 : #000000,
-          600 : #000000,
-          700 : #000000,
-          800 : #000000,
-          900 : #000000,
-          A100 : #000000,
-          A200 : #000000,
-          A400 : #000000,
-          A700 : #000000,
-      ));
-$my-warn-color:  (50 : #ffe4f0,
-     100 : #febcd9,
-     200 : #fd8fc0,
-     300 : #fc62a7,
-     400 : #fc4194,
-     500 : #fb1f81,
-     600 : #fa1b79,
-     700 : #fa176e,
-     800 : #f91264,
-     900 : #f80a51,
-     A100 : #ffffff,
-     A200 : #ffeef2,
-     A400 : #ffbbcc,
-     A700 : #ffa1b9,
-     contrast: (50 : #000000,
-         100 : #000000,
-         200 : #000000,
-         300 : #000000,
-         400 : #000000,
-         500 : #ffffff,
-         600 : #ffffff,
-         700 : #ffffff,
-         800 : #ffffff,
-         900 : #ffffff,
-         A100 : #000000,
-         A200 : #000000,
-         A400 : #000000,
-         A700 : #000000,
-     ));
+$my-accent-color:mat.define-palette( (
+    50 : #f6f6f6,
+    100 : #e9e9e9,
+    200 : #dbdbdb,
+    300 : #cccccc,
+    400 : #c1c1c1,
+    500 : #b6b6b6,
+    600 : #afafaf,
+    700 : #a6a6a6,
+    800 : #9e9e9e,
+    900 : #8e8e8e,
+    A100 : #ffffff,
+    A200 : #fef6f6,
+    A400 : #ffc2c2,
+    A700 : #ffa8a8,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    ))
+);
+$my-warn-color:mat.define-palette( (
+    50 : #ffe4f0,
+    100 : #febcd9,
+    200 : #fd8fc0,
+    300 : #fc62a7,
+    400 : #fc4194,
+    500 : #fb1f81,
+    600 : #fa1b79,
+    700 : #fa176e,
+    800 : #f91264,
+    900 : #f80a51,
+    A100 : #ffffff,
+    A200 : #ffeef2,
+    A400 : #ffbbcc,
+    A700 : #ffa1b9,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    ))
+);
 //PALETA LIGHT
-$my-primary-color2: (50 : #e2e4e7,
+$my-primary-color2:mat.define-palette( (
+    50 : #e2e4e7,
     100 : #b6bbc3,
     200 : #868e9b,
     300 : #556172,
@@ -120,9 +126,11 @@ $my-primary-color2: (50 : #e2e4e7,
         A200 : #ffffff,
         A400 : #ffffff,
         A700 : #ffffff,
-    ));
+    ))
+);
 
-$my-accent-color2: (50 : #e6eaf0,
+$my-accent-color2: mat.define-palette((
+    50 : #e6eaf0,
     100 : #c1cbda,
     200 : #97a8c1,
     300 : #6d85a8,
@@ -150,8 +158,9 @@ $my-accent-color2: (50 : #e6eaf0,
         A200 : #000000,
         A400 : #ffffff,
         A700 : #ffffff,
-    ));
-$my-warn-color2: (
+    ))
+);
+$my-warn-color2: mat.define-palette((
     50 : #ffe4f0,
     100 : #febcd9,
     200 : #fd8fc0,
@@ -181,48 +190,25 @@ $my-warn-color2: (
         A400 : #000000,
         A700 : #000000,
     )
-);
+));
 
+// Definir tema oscuro
+$dark-theme: mat.define-dark-theme((color: (primary: $my-primary-color,
+                accent: $my-accent-color,
+                warn: $my-warn-color,
+            )));
 
-
-// PALETA DE COLORES
-$my-palette-primary: mat-palette($my-primary-color);
-$my-palette-accent: mat-palette($my-accent-color);
-$my-palette-warn: mat-palette($my-warn-color);
-
-
-$my-palette-primary2: mat-palette($my-primary-color2);
-$my-palette-accent2: mat-palette($my-accent-color2);
-$my-palette-warn2: mat-palette($my-warn-color2);
-// TEMA PROPIO
-$my-theme-dark: mat-dark-theme((color: (primary: $my-palette-primary,
-                accent: $my-palette-accent,
-                warn: $my-palette-warn )
-           // Mantén la tipografía por defecto
-        ));
-                                
-                
-$my-theme-light: mat-light-theme((color: (primary: $my-palette-primary2,
-                accent: $my-palette-accent2,
-                warn: $my-palette-warn2 )
-            // Mantén la tipografía por defecto
-        ));
-
-
-// APLICAR NUESTRO TEMA A ANGULAR
-
-.dark-theme{
-@include angular-material-color($my-theme-dark);
+// Definir tema claro
+$light-theme: mat.define-light-theme((color: (primary: $my-primary-color2,
+            accent: $my-accent-color2,
+            warn: $my-warn-color2,
+        )));
+// Aplicar tema oscuro por defecto
+.dark-theme {
+    @include mat.all-component-themes($dark-theme);
 }
 
-
-.light-theme{
-@include angular-material-theme($my-theme-light);
+// Aplicar tema claro
+.light-theme {
+    @include mat.all-component-themes($light-theme);
 }
-
-
-
-// REEMPLAZA EN ANGULAR.JSON -> STYLES
-// "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-// POR LA RUTA DEL CUSTOM THEME
-// "src/assets/styles/my-theme.scss",
