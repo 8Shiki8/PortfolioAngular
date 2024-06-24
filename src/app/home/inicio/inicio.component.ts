@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from 'src/app/shared/footer/footer.component';
 import { FooterComponent as FooterComponent_1 } from '../../shared/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';

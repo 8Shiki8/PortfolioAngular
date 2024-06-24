@@ -1,7 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Juego } from '../../models/juego';
-import { OnSameUrlNavigation } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { Carrito } from 'src/app/models/carrito';
@@ -17,7 +15,6 @@ import {
 import { SharedService } from 'src/app/services/shared.service';
 import { CompraDTO } from 'src/app/models/compraDTO';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSnackBarConfig } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
@@ -115,7 +112,7 @@ export class JuegosComponent implements OnInit {
     const cantidades = this.form.get('cantidades') as FormArray;
     return cantidades.at(index) as FormControl;
   }
- 
+
   constructor(
     private sharedS: SharedService,
     private fb: FormBuilder,

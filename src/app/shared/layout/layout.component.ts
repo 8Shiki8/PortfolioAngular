@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';

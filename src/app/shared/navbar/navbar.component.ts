@@ -6,12 +6,10 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { SharedService } from 'src/app/services/shared.service';
 import { Subscription } from 'rxjs';
 import { CompraDTO } from 'src/app/models/compraDTO';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { DOCUMENT } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';

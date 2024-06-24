@@ -10,6 +10,7 @@ import {
   throwError,
 } from 'rxjs';
 import { HttpClient, HttpResponse } from '@angular/common/http';
+import { backendProd,backendDev } from './../enviroments/enviroments';
 
 export interface JuegoDTO {
   id: number;
@@ -19,13 +20,15 @@ export interface JuegoDTO {
   descripcion: string;
   categoria: string[] | null;
   cantidad: number;
+  
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class JuegosService {
-  resourceUrl2 = 'https://localhost:44398/api/Juego/All';
+  resourceUrl2 = backendProd+'/api/Juego/All';
+
 
   findAll(): Observable<Juego[]> {
     return this.http.get<any[]>(this.resourceUrl2).pipe(
