@@ -4,7 +4,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { HttpClientModule } from '@angular/common/http';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'layout/tienda/juegos', pathMatch: 'full' },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
   {
     path: 'layout',

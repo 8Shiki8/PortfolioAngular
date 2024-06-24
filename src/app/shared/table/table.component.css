@@ -2,3 +2,31 @@
     color: #0cc90c;
     font-weight: bold;
 }
+
+
+@media (max-width: 768px) {
+    .icon-delete{
+        font-size: 16px;
+        width: 16px;
+            /* Ajusta el ancho del contenedor del icono */
+            height: 16px;
+            /* Ajusta la altura del contenedor del icono */
+    }
+
+    .tabla-container {
+            max-width: 100%;
+        }
+    /* Estilo para dispositivos móviles */
+    .responsive-table th,
+    .responsive-table td {
+        font-size: 8px;
+        max-width: 70px;
+        padding: 5px;
+        /* Ajusta el padding para mejorar la legibilidad */
+    }
+
+    .responsive-table tr {
+        border-bottom: 1px solid #ddd;
+        /* Agrega bordes entre filas para mayor claridad */
+    }
+}

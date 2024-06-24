@@ -26,6 +26,8 @@ import { NgFor } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { JuegosService } from 'src/app/services/juegos.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-juegos',
   templateUrl: './juegos.component.html',
@@ -113,13 +115,14 @@ export class JuegosComponent implements OnInit {
     const cantidades = this.form.get('cantidades') as FormArray;
     return cantidades.at(index) as FormControl;
   }
-
+ 
   constructor(
     private sharedS: SharedService,
     private fb: FormBuilder,
     private JuegoService: JuegosService,
     public dialog: MatDialog,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private router: Router
   ) {
     this.form = this.fb.group({
       cantidades: this.fb.array([]),

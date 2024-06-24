@@ -4,11 +4,38 @@
     background-color: aqua;
 
 }
+.dialog-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .dialog-img{
-    width: 600px;
+    width:  600px;
     height: auto;
 }
 .dialog-p{
     width: 600px;
     height: auto;
+}
+
+
+@media(max-width: 768px){
+
+    .dialog-title{
+        font-size: 14px;
+    }
+    .dialog-subtitle{
+        font-size:12px;
+    }
+    .dialog-img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .dialog-p{
+        font-size: 12px;
+        width: 100%;
+    }
+    
+
 }

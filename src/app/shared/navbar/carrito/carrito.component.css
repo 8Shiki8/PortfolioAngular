@@ -1,4 +1,17 @@
-.mat-typography{
+.mat-typography.dialog-tabla{
     width: 800px;
     height: auto;
+}
+
+@media (min-width:1024px){
+    .mat-typography.dialog-tabla {
+            width: 800px ;
+            height: auto;
+        }
+}
+@media (max-width:768px) {
+    .mat-typography.dialog-tabla {
+        width: 300px;
+        height: auto;
+    }
 }
