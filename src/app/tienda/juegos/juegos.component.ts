@@ -1,9 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
-import { JuegosService } from 'src/app/services/juegos.service';
 import { Juego } from '../../models/juego';
-import { OnSameUrlNavigation } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { Carrito } from 'src/app/models/carrito';
 import {
@@ -12,16 +9,40 @@ import {
   FormArray,
   FormGroup,
   Validators,
+  FormsModule,
+  ReactiveFormsModule,
 } from '@angular/forms';
 import { SharedService } from 'src/app/services/shared.service';
 import { CompraDTO } from 'src/app/models/compraDTO';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatSnackBarConfig } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { NgFor } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { JuegosService } from 'src/app/services/juegos.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-juegos',
   templateUrl: './juegos.component.html',
   styleUrls: ['./juegos.component.css'],
+  standalone: true,
+  imports: [
+    NgFor,
+    MatCardModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    HttpClientModule,
+    MatSnackBarModule,
+  ],
+  providers: [JuegosService], // Asegúrate de proveer JuegosService
 })
 export class JuegosComponent implements OnInit {
   @Output() dataCantidades = new EventEmitter<FormGroup>();
@@ -97,7 +118,8 @@ export class JuegosComponent implements OnInit {
     private fb: FormBuilder,
     private JuegoService: JuegosService,
     public dialog: MatDialog,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private router: Router
   ) {
     this.form = this.fb.group({
       cantidades: this.fb.array([]),

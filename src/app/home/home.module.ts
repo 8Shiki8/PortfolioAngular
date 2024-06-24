@@ -1,16 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { InicioComponent } from './inicio/inicio.component';
-import { HomeRoutingModule } from './home-routing.module';
-import { SharedModule } from '../shared/shared.module';
-import { MatButtonModule } from '@angular/material/button';
+// import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common';
+// import { InicioComponent } from './inicio/inicio.component';
 
-import { FormsModule } from '@angular/forms';
+// import { SharedModule } from '../shared/shared.module';
+// import { MatButtonModule } from '@angular/material/button';
 
-@NgModule({
-  declarations: [InicioComponent],
-  imports: [CommonModule, HomeRoutingModule, FormsModule, SharedModule,MatButtonModule],
+// import { FormsModule } from '@angular/forms';
 
-  exports: [InicioComponent],
-})
-export class HomeModule {}
+// @NgModule({
+//     imports: [CommonModule, FormsModule, SharedModule, MatButtonModule, InicioComponent],
+//     exports: [InicioComponent],
+// })
+// export class HomeModule {}

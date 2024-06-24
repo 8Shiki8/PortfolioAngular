@@ -1,26 +1,26 @@
 <div class="card-container">
     <mat-card *ngFor="let elem of juegosList; let i = index" class="example-card ">
-        <mat-card-header>
-            <mat-card-title>{{elem.nombre}}</mat-card-title>
-            <mat-card-subtitle>{{elem.descripcion}}</mat-card-subtitle>
+        <mat-card-header class="card-header">
+            <mat-card-title class="card-title">{{elem.nombre}}</mat-card-title>
+            <mat-card-subtitle class="card-subtitle">{{elem.descripcion}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src={{elem.imagen}} class="img-juego" alt="Photo of a Shiba Inu">
 
         <form action="" (ngSubmit)="addCarrito(elem,getControl(i).value,i)">
-            <mat-card-content>
-                <button class="elem-card" mat-flat-button type="button" color="accent" (click)="openDialog(elem)">Mas
+            <mat-card-content class="card-content">
+                <button class="elem-card card-button" mat-flat-button type="button" color="accent" (click)="openDialog(elem)">Mas
                     informacion</button>
 
-                <mat-form-field class="elem-card" color="primary" appearance="fill" class="input-number mat-primary">
-                    <mat-label>Comprar</mat-label>
-                    <input matInput [formControl]="getControl(i)" type="number" min="1" step="1" value=""
+                <mat-form-field class="elem-card card-input" color="primary" appearance="fill" class="input-number mat-primary">
+                    <mat-label class="card-input">Comprar</mat-label>
+                    <input matInput [formControl]="getControl(i)" class="card-input" type="number" min="1" step="1" value=""
                         placeholder="Cantidad" name="cantidad">
                 </mat-form-field>
                 <label class="elem-card label-precio" for="">Precio: <span class="card-precio">${{elem.precio}} </span>
                 </label>
 
                 <mat-card-actions class="elem-card">
-                    <button mat-flat-button color="accent" [disabled]="getControl(i).invalid"
+                    <button class="card-button" mat-flat-button color="accent" [disabled]="getControl(i).invalid"
                         type="submit">Comprar</button>
                 </mat-card-actions>
 

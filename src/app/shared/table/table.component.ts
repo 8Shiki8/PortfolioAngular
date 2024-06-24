@@ -1,14 +1,24 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { SharedService } from './../../services/shared.service';
 import { CompraDTO } from 'src/app/models/compraDTO';
-import { MatTableDataSource } from '@angular/material/table';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import {  MatTableModule } from '@angular/material/table';
 import { Subscription } from 'rxjs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css'],
+    selector: 'app-table',
+    templateUrl: './table.component.html',
+    styleUrls: ['./table.component.css'],
+    standalone: true,
+    imports: [
+        MatTableModule,
+        NgFor,
+        NgIf,
+        MatButtonModule,
+        MatIconModule,
+    ],
 })
 export class TableComponent implements OnInit {
   displayedColumns: string[] = [

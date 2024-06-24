@@ -60,13 +60,11 @@ h1.textTitle{
 .hero2 {
     position: relative;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 20rem;
     overflow: hidden;
     margin-top: 20%;
-  
 }
 
 .title-hero {
@@ -148,6 +146,7 @@ h1.textTitle{
     height: 700px;
     background-image: url("../../../assets/img/Acerca de.webp");
     background-position: center;
+   
         /* Centra la imagen */
     border-radius: 2%;
     text-align: center;
@@ -165,4 +164,10 @@ h1.textTitle{
 main{
     background-color: #1b1b1b;
 
+}
+.main-carousel{
+    margin-top: 20px;
+}
+.carousel-responsive{
+    display:none;
 }

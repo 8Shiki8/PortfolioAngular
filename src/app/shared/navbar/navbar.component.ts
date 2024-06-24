@@ -6,27 +6,42 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { SharedService } from 'src/app/services/shared.service';
 import { Subscription } from 'rxjs';
 import { CompraDTO } from 'src/app/models/compraDTO';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { DOCUMENT } from '@angular/common';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Router } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
+  standalone: true,
+  imports: [
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatBadgeModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+  ],
 })
-export class NavbarComponent implements OnInit, OnDestroy {
+export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
   cantidad: number = 0;
   hidden: boolean = true;
   dataCompra: CompraDTO[] | null = null;
   subs: Subscription = new Subscription();
   temaClaro: Boolean = true;
   checked: boolean = true;
+  toggle: boolean = true;
 
   ngOnInit(): void {
     if (this.dataCompra) {
@@ -41,6 +56,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
       })
     );
     this.cantidad = this.cantidadSuma();
+    if (this.cantidad > 0) {
+      this.hidden = !this.hidden;
+    }
+  }
+  ngAfterViewInit(): void {
     if (this.cantidad > 0) {
       this.hidden = !this.hidden;
     }
@@ -108,9 +128,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
       );
     }
   }
+  navigateHome() {
+    this.router.navigate(['inicio']);
+  }
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private sharedSer: SharedService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) {}
 }

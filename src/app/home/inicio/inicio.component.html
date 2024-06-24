@@ -10,6 +10,8 @@
         <span class="portrait"><img class="hero-img" src="../../../assets/img/img5.jpg" alt="Imagen 5"></span>
         <span class="portrait"><img class="hero-img" src="../../../assets/img/img7.jpg" alt="Imagen 7"></span>
         <span class="portrait"><img class="hero-img" src="../../../assets/img/img8.jpg" alt="Imagen 8"></span>
+        <span class="portrait"><img class="hero-img" src="../../../assets/img/img9.jpg" alt="Imagen 8"></span>
+        <span class="portrait"><img class="hero-img" src="../../../assets/img/img10.jpg" alt="Imagen 8"></span>
         <span class="portrait"><img class="hero-img" src="../../../assets/img/img6.jpg" alt="Imagen 6"></span>
         <span class="portrait"><img class="hero-img" src="../../../assets/img/img1.jpg" alt="Imagen 1"></span>
         <span class="portrait"><img class="hero-img" src="../../../assets/img/img2.jpg" alt="Imagen 2"></span>
@@ -22,90 +24,265 @@
     <section class="hero2">
         <h2 class="textTitle2 ">¡Tus Juegos en un solo Lugar!</h2>
         <br>
-        <button mat-flat-button color="blue" style="background-color: #3737c5;">Ir a la Tienda</button>
+        <button mat-flat-button color="warn" style="border-color: magenta;border-width: 2px;"
+            (click)="navigateTienda()">Ir a la Tienda</button>
     </section>
 
-    <section class="info">
-        <div class="info-wrapper">
-            <div class="info-text">
-                <h2 class="subtitle textTitle2">PlayStation 4</h2>
-                <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
-                    xml:space="preserve">
-                    <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
-                </svg>
-                <br><br>
-                <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,
-                    earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae iste
-                    eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est iusto id
-                    voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere a?
-                    Repellat, error quas. Sunt eos harum fugit at sint.</p>
-                <br><br>
-                <img src="../../../assets/img/consola1.png" alt="Consola 1">
-            </div>
-        </div>
 
-        <div class="info-wrapper">
-            <div class="info-text">
-                <h2 class="subtitle textTitle2">XBox</h2>
-                <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
-                    xml:space="preserve">
-                    <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
-                </svg>
-                <br><br>
-                <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,
-                    earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae iste
-                    eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est iusto id
-                    voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere a?
-                    Repellat, error quas. Sunt eos harum fugit at sint.</p>
-                <img src="../../../assets/img/consola2.png" alt="Consola 2">
-            </div>
-        </div>
+    <div class="carousel-desktop">
+        <ngb-carousel [interval]="5000" class="main-carousel">
+            <ng-template ngbSlide>
+                <section class="info">
+                    <div class="info-wrapper">
+                        <div class="info-text">
+                            <h2 class="subtitle textTitle2">PlayStation 4</h2>
+                            <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
+                                xml:space="preserve">
+                                <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
+                            </svg>
+                            <br><br>
+                            <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                In,
+                                earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae
+                                iste
+                                eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est
+                                iusto
+                                id
+                                voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere
+                                a?
+                                Repellat, error quas. Sunt eos harum fugit at sint.</p>
+                            <br><br>
+                            <img class="info-img" src="../../../assets/img/consola1.png" alt="Consola 1">
+                        </div>
+                    </div>
 
-        <div class="info-wrapper">
-            <div class="info-text">
-                <h2 class="subtitle textTitle2">PC</h2>
-                <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
-                    xml:space="preserve">
-                    <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
-                </svg>
-                <br><br>
-                <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In,
-                    earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae iste
-                    eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est iusto id
-                    voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere a?
-                    Repellat, error quas. Sunt eos harum fugit at sint.</p>
-                <img src="../../../assets/img/consola3.png" alt="Consola 3">
-            </div>
-        </div>
+                    <div class="info-wrapper">
+                        <div class="info-text">
+                            <h2 class="subtitle textTitle2">XBox</h2>
+                            <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
+                                xml:space="preserve">
+                                <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
+                            </svg>
+                            <br><br>
+                            <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                In,
+                                earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae
+                                iste
+                                eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est
+                                iusto
+                                id
+                                voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere
+                                a?
+                                Repellat, error quas. Sunt eos harum fugit at sint.</p>
+                            <img class="info-img" src="../../../assets/img/consola2.png" alt="Consola 2">
+                        </div>
+                    </div>
 
-    </section>
+                    <div class="info-wrapper">
+                        <div class="info-text">
+                            <h2 class="subtitle textTitle2">PC</h2>
+                            <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
+                                xml:space="preserve">
+                                <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
+                            </svg>
+                            <br><br>
+                            <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                In,
+                                earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae
+                                iste
+                                eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est
+                                iusto
+                                id
+                                voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere
+                                a?
+                                Repellat, error quas. Sunt eos harum fugit at sint.</p>
+                            <img class="info-img" src="../../../assets/img/consola3.png" alt="Consola 3">
+                        </div>
+                    </div>
 
-    <div class="acerca-container">
-        <div class="acerca">
+                </section>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="acerca-container">
+                    <div class="acerca">
 
-            <div class="acerca-parrafo">
-                <h1>Acerca de nosotros</h1>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo rerum mollitia
-                    voluptas praesentium quaerat eveniet quibusdam suscipit eos excepturi, minus rem nihil! Asperiores,
-                    eos
-                    necessitatibus id praesentium quidem mollitia impedit.
-                    Repudiandae deleniti, reiciendis quisquam cum, nostrum ipsa quasi dicta molestias architecto ipsam
-                    optio
-                    quam sit perferendis maiores voluptatum atque hic impedit! Ad ab pariatur ipsum reiciendis, iste
-                    voluptas
-                    numquam voluptatem.
-                    Nostrum neque aspernatur, in voluptate laudantium quam ullam odit, non ipsum ab at eaque ad
-                    veritatis?
-                    Odit
-                    saepe alias blanditiis porro, eligendi inventore praesentium, culpa suscipit, asperiores eius
-                    quaerat
-                    molestias?</p>
-            </div>
+                        <div class="acerca-parrafo">
+                            <h1>Acerca de nosotros</h1>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo rerum mollitia
+                                voluptas praesentium quaerat eveniet quibusdam suscipit eos excepturi, minus rem nihil!
+                                Asperiores,
+                                eos
+                                necessitatibus id praesentium quidem mollitia impedit.
+                                Repudiandae deleniti, reiciendis quisquam cum, nostrum ipsa quasi dicta molestias
+                                architecto
+                                ipsam
+                                optio
+                                quam sit perferendis maiores voluptatum atque hic impedit! Ad ab pariatur ipsum
+                                reiciendis,
+                                iste
+                                voluptas
+                                numquam voluptatem.
+                                Nostrum neque aspernatur, in voluptate laudantium quam ullam odit, non ipsum ab at eaque
+                                ad
+                                veritatis?
+                                Odit
+                                saepe alias blanditiis porro, eligendi inventore praesentium, culpa suscipit, asperiores
+                                eius
+                                quaerat
+                                molestias?</p>
+                        </div>
 
-        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </ng-template>
+
+
+        </ngb-carousel>
+
+    </div>
+
+
+    <div class="carousel-responsive">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <section class="info">
+                    <div class="info-wrapper">
+                        <div class="info-text">
+                            <h2 class="subtitle textTitle2">PlayStation 4</h2>
+                            <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
+                                xml:space="preserve">
+                                <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
+                            </svg>
+                            <br><br>
+                            <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                In,
+                                earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae
+                                iste
+                                eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est
+                                iusto
+                                id
+                                voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere
+                                a?
+                                Repellat, error quas. Sunt eos harum fugit at sint.</p>
+                            <br><br>
+                            <img class="info-img" src="../../../assets/img/consola1.png" alt="Consola 1">
+                        </div>
+                    </div>
+
+
+
+                </section>
+
+            </ng-template>
+            <ng-template ngbSlide>
+                <section class="info">
+
+
+                    <div class="info-wrapper">
+                        <div class="info-text">
+                            <h2 class="subtitle textTitle2">XBox</h2>
+                            <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
+                                xml:space="preserve">
+                                <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
+                            </svg>
+                            <br><br>
+                            <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                In,
+                                earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae
+                                iste
+                                eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est
+                                iusto
+                                id
+                                voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere
+                                a?
+                                Repellat, error quas. Sunt eos harum fugit at sint.</p>
+                            <img class="info-img" src="../../../assets/img/consola2.png" alt="Consola 2">
+                        </div>
+                    </div>
+
+
+
+                </section>
+            </ng-template>
+            <ng-template ngbSlide>
+                <section class="info">
+
+
+                    <div class="info-wrapper">
+                        <div class="info-text">
+                            <h2 class="subtitle textTitle2">PC</h2>
+                            <svg class="lineFooter" version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px" height="5px"
+                                xml:space="preserve">
+                                <path class="path2" fill="#01a09e" stroke-width="3" stroke="white" d="M0 0 l1120 0" />
+                            </svg>
+                            <br><br>
+                            <p class="textNormal parrafoMain">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                In,
+                                earum dolore? Eligendi officia veritatis rerum nemo, optio qui delectus, saepe molestiae
+                                iste
+                                eaque aliquid. Sit ipsa nam doloribus quos ipsum! Explicabo nisi ex provident unde est
+                                iusto
+                                id
+                                voluptas adipisci enim omnis mollitia, autem culpa ab, corporis, quaerat deleniti facere
+                                a?
+                                Repellat, error quas. Sunt eos harum fugit at sint.</p>
+                            <img class="info-img" src="../../../assets/img/consola3.png" alt="Consola 3">
+                        </div>
+                    </div>
+
+                </section>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="acerca-container">
+                    <div class="acerca">
+
+                        <div class="acerca-parrafo">
+                            <h1>Acerca de nosotros</h1>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo rerum mollitia
+                                voluptas praesentium quaerat eveniet quibusdam suscipit eos excepturi, minus rem nihil!
+                                Asperiores,
+                                eos
+                                necessitatibus id praesentium quidem mollitia impedit.
+                                Repudiandae deleniti, reiciendis quisquam cum, nostrum ipsa quasi dicta molestias
+                                architecto
+                                ipsam
+                                optio
+                                quam sit perferendis maiores voluptatum atque hic impedit! Ad ab pariatur ipsum
+                                reiciendis,
+                                iste
+                                voluptas
+                                numquam voluptatem.
+                                Nostrum neque aspernatur, in voluptate laudantium quam ullam odit, non ipsum ab at eaque
+                                ad
+                                veritatis?
+                                Odit
+                                saepe alias blanditiis porro, eligendi inventore praesentium, culpa suscipit, asperiores
+                                eius
+                                quaerat
+                                molestias?</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </ng-template>
+
+        </ngb-carousel>
 
     </div>
 

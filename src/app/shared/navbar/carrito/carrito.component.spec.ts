@@ -8,8 +8,8 @@ describe('CarritoComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CarritoComponent]
-    });
+    imports: [CarritoComponent]
+});
     fixture = TestBed.createComponent(CarritoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

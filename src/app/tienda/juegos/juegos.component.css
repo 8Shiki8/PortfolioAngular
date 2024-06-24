@@ -21,7 +21,8 @@ mat-card-content{
     display: flex;
     flex-direction: column;
     /* Dirección de los elementos (puede ser row o column) */
-    align-items: center;
+    align-items:center;
+    
 }
 .elem-card{
     margin:5px;
@@ -32,4 +33,38 @@ mat-card-content{
 .card-precio{
     color:#0cc90c;
     font-weight: bold;
+}
+
+@media(max-width:768px)
+{
+   
+    .img-juego{
+        margin: 5px;
+    }
+    .example-card{
+        width: 45%;
+        height: auto;
+        margin:5px
+    }
+    
+    .card-title{
+        font-size: 12px;
+    }
+    .card-subtitle{
+        font-size: 12px;
+    }
+    .card-button{
+        width: 60%;
+        font-size: 10px;
+        margin: 2px;
+        line-height: 1;
+    }
+    .card-input{
+      height: 40%;
+      font-size: 10px;
+      padding: 0;
+      margin: 2px;
+    }
+
+
 }

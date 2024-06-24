@@ -1,12 +1,14 @@
 <div>
     <div id="reemplazable">
-        <h2 mat-dialog-title>{{data.game.nombre}}</h2>
+        <h2 mat-dialog-title class="dialog-title">{{data.game.nombre}}</h2>
         <mat-dialog-content class="mat-typography">
-            <h3>{{data.game.descripcion}}</h3>
+            <h3 class="dialog-subtitle">{{data.game.descripcion}}</h3>
+            <div class="dialog-image-container">
+                <img class="dialog-img" src={{data.game.imagen}} alt="">
 
-            <img class="dialog-img" src={{data.game.imagen}} alt="">
-            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-                <mat-tab label="Sinopsis"></mat-tab>
+            </div>
+            <mat-tab-group color="accent" mat-stretch-tabs="false" mat-align-tabs="start">
+                <mat-tab class="dialog-label" label="Sinopsis"></mat-tab>
             </mat-tab-group>
             <p class="dialog-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatum
                 perferendis,
@@ -20,10 +22,10 @@
                 doloremque!</p>
             <label for="">Categoria:</label>
             <span *ngFor="let elem of data.game.categoria">
-                <mat-chip mat-mdc-basic-chip>{{elem}}</mat-chip>
+                <mat-chip class="dialog-chip" mat-mdc-basic-chip>{{elem}}</mat-chip>
             </span>
             <br>
-            <label for="">Precio:</label><span>${{data.game.precio}}</span>
+            <label for="" class="dialog-label">Precio:</label><span class="dialog-precio">${{data.game.precio}}</span>
 
 
         </mat-dialog-content>
