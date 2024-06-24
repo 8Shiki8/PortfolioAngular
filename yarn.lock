@@ -136,7 +136,7 @@
   optionalDependencies:
     parse5 "^7.1.2"
 
-"@angular/cli@~17.3.8":
+"@angular/cli@17":
   version "17.3.8"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-17.3.8.tgz#3673fd5dd4fbc96a6ed57c4e871ac5a92d5702c7"
   integrity sha512-X5ZOQ6ZTKVHjhIsfl32ZRqbs+FUoeHLbT7x4fh2Os/8ObDDwrUcCJPqxe2b2RB5E2d0vepYigknHeLE7gwzlNQ==
