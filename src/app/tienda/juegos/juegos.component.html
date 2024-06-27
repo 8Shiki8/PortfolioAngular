@@ -1,3 +1,11 @@
+@if(!juegosList&&error===false){
+<div class="spinner-container">
+    <mat-spinner></mat-spinner>
+
+</div>
+
+}
+@if(juegosList){
 <div class="card-container">
     <mat-card *ngFor="let elem of juegosList; let i = index" class="example-card ">
         <mat-card-header class="card-header">
@@ -8,13 +16,15 @@
 
         <form action="" (ngSubmit)="addCarrito(elem,getControl(i).value,i)">
             <mat-card-content class="card-content">
-                <button class="elem-card card-button" mat-flat-button type="button" color="accent" (click)="openDialog(elem)">Mas
+                <button class="elem-card card-button" mat-flat-button type="button" color="accent"
+                    (click)="openDialog(elem)">Mas
                     informacion</button>
 
-                <mat-form-field class="elem-card card-input" color="primary" appearance="fill" class="input-number mat-primary">
+                <mat-form-field class="elem-card card-input" color="primary" appearance="fill"
+                    class="input-number mat-primary">
                     <mat-label class="card-input">Comprar</mat-label>
-                    <input matInput [formControl]="getControl(i)" class="card-input" type="number" min="1" step="1" value=""
-                        placeholder="Cantidad" name="cantidad">
+                    <input matInput [formControl]="getControl(i)" class="card-input" type="number" min="1" step="1"
+                        value="" placeholder="Cantidad" name="cantidad">
                 </mat-form-field>
                 <label class="elem-card label-precio" for="">Precio: <span class="card-precio">${{elem.precio}} </span>
                 </label>
@@ -30,4 +40,11 @@
         </form>
 
     </mat-card>
+</div>}
+@if(error){
+<div>
+    <br>
+    <p>SE HA PRODUCIDO UN ERROR, INTENTA RECARGAR LA PAGINA</p>
+    <br>
 </div>
+}

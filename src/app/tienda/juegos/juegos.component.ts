@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { JuegosService } from 'src/app/services/juegos.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-juegos',
@@ -41,6 +42,7 @@ import { Router } from '@angular/router';
     MatDialogModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [JuegosService], // Asegúrate de proveer JuegosService
 })
@@ -51,15 +53,20 @@ export class JuegosComponent implements OnInit {
   juego: Juego | null = null;
   form: FormGroup;
   sharedSer: SharedService | null = null;
+  error: boolean = false;
 
   ngOnInit() {
     this.JuegoService.findAll().subscribe(
       (res) => (
-        (this.juegosList = res), console.log(res), this.initializeFormControls()
+        (this.juegosList = res),
+        console.log(res),
+        this.initializeFormControls(),
+        (this.error = false)
       ),
 
       (error) => {
         console.log('hubo un error');
+        this.error = true;
         console.log(error);
       },
       () => console.log('termino la solicitud')
@@ -88,8 +95,7 @@ export class JuegosComponent implements OnInit {
       console.log(carrito);
       console.log(this.carritos);
       this.sharedS?.addCompra(new CompraDTO(juego, cantidad));
-      this.getControl(index).setValue(1);
-      this.getControl(index).pristine;
+      this.getControl(index).reset();
 
       this._snackBar.open('¡Agregado al carrito!', 'cerrar', {
         duration: 2000,

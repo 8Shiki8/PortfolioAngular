@@ -1,14 +1,27 @@
+/*ESTILOS CARD*/
+.spinner-container{
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*ESTILOS DE CARD */
+
+/* :host ::ng-deep .mat-mdc-text-field-wrapper {
+        height: 40px;
+
+} */
+
+
 .card-container{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-    
 }
 .example-card {
     max-width: 300px;
     margin-bottom: 20px;
-    
 }
 .img-juego{
     margin:20px
