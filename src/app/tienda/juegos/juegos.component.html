@@ -7,7 +7,7 @@
 }
 @if(juegosList){
 <div class="card-container">
-    <mat-card *ngFor="let elem of juegosList; let i = index" class="example-card ">
+    <mat-card *ngFor="let elem of juegosList; let i = index" class="example-card" appearance="outlined">
         <mat-card-header class="card-header">
             <mat-card-title class="card-title">{{elem.nombre}}</mat-card-title>
             <mat-card-subtitle class="card-subtitle">{{elem.descripcion}}</mat-card-subtitle>

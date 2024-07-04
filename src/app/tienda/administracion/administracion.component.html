@@ -1,0 +1,133 @@
+<br>
+<h1 class="textTitle title-admin">Agregar juego al catalogo</h1>
+<br>
+<div id="admin-container">
+
+    <mat-card appearance="raised">
+        <mat-card-content>
+
+            <mat-accordion class="example-headers-align" multi>
+
+                <mat-expansion-panel class="input-container">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> DATOS DEL JUEGO</mat-panel-title>
+                        <!-- <mat-panel-description style="font-style: italic;">
+                            agrega un nuevo juego al catalogo
+                            <mat-icon>account_circle</mat-icon>
+                        </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+
+                    <div *ngIf="false">asdasdasd</div>
+
+                    <mat-card appearance="outlined">
+                        <mat-card-content>
+                            <form [formGroup]="gameForm" (ngSubmit)="agregarJuego()">
+                                <mat-form-field>
+                                    <mat-label #label>Nombre</mat-label>
+                                    <input type="text" formControlName="nombre" matInput />
+
+                                    @if(gameForm.controls["nombre"].invalid&&(
+                                    gameForm.controls["nombre"].dirty||gameForm.controls["nombre"].touched)){
+
+                                    @if(gameForm.controls["nombre"].errors?.["required"]){
+                                    <div>
+                                        <mat-hint style="font-size: 10px; color: red;">Porfavor
+                                            complete
+                                            el
+                                            campo</mat-hint>
+                                    </div>
+
+                                    }
+                                    }
+
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field>
+                                    <mat-label>Plataforma</mat-label>
+                                    <input type="text" formControlName="plataforma" matInput />
+                                    @if(gameForm.controls["plataforma"].invalid&&(
+                                    gameForm.controls["plataforma"].dirty||gameForm.controls["plataforma"].touched)){
+
+                                    @if(gameForm.controls["plataforma"].errors?.["required"]){
+                                    <div>
+                                        <mat-hint style="font-size: 10px; color: red;">Porfavor
+                                            complete
+                                            el
+                                            campo</mat-hint>
+                                    </div>
+
+                                    }
+                                    }
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field>
+                                    <mat-label>Precio</mat-label>
+                                    <input type="number" formControlName="precio" matInput />
+                                    @if(gameForm.controls["precio"].invalid&&(
+                                    gameForm.controls["precio"].dirty||gameForm.controls["precio"].touched)){
+
+                                    @if(gameForm.controls["precio"].errors?.["required"]){
+                                    <div>
+                                        <mat-hint style="font-size: 10px; color: red;">Porfavor
+                                            Ingrese un numero</mat-hint>
+                                    </div>
+
+                                    }
+                                    @if(gameForm.controls["precio"].errors?.["pattern"]){
+                                    <div>
+                                        <mat-hint style="font-size: 10px; color: red;">Porfavor
+                                            utilize solo numeros</mat-hint>
+                                    </div>
+
+                                    }
+                                    }
+                                </mat-form-field>
+                                <br>
+
+                                <mat-form-field>
+                                    <mat-label>Categorias</mat-label>
+                                    <mat-select formControlName="categorias" multiple>
+                                        @for (elem of categoriasList; track elem) {
+                                        <mat-option [value]="elem.id+''">{{elem.tipo}}</mat-option>
+                                        }
+                                    </mat-select>
+                                    @if(gameForm.controls["categorias"].invalid&&(
+                                    gameForm.controls["categorias"].dirty||gameForm.controls["categorias"].touched)){
+
+                                    @if(gameForm.controls["categorias"].errors?.["required"]){
+                                    <div>
+                                        <mat-hint style="font-size: 10px; color: red;">
+                                            Agregue almenos una categoria</mat-hint>
+                                    </div>
+
+                                    }
+                                    }
+                                </mat-form-field>
+                                <br>
+
+                                <button mat-flat-button type="submit" color="accent"
+                                    [disabled]="gameForm.invalid">Agregar</button>
+                            </form>
+
+                        </mat-card-content>
+                    </mat-card>
+
+
+
+
+                </mat-expansion-panel>
+
+            </mat-accordion>
+        </mat-card-content>
+    </mat-card>
+
+
+
+
+</div>
+<br>
+<h1 class="textTitle title-admin">Usuarios</h1>
+<br>
+<h1 class="textTitle title-admin">Buscar Usuarios por NAD</h1>
+<br>
+<h1 class="textTitle title-admin">Buscar juego por ID</h1>

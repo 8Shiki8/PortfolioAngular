@@ -12,11 +12,11 @@
                     <mat-icon>home</mat-icon>
                     Home
                 </button>
-                <button mat-fab extended color="accent">
+                <button mat-fab extended color="accent" (click)="navigateTienda()">
                     <mat-icon>store</mat-icon>
                     Tienda
                 </button>
-                <button mat-fab extended color="accent" (click)="setTheme()">
+                <button mat-fab extended color="accent" (click)="navigateAdmin()">
                     <mat-icon>view_list</mat-icon>
                     Administracion
                 </button>
@@ -36,11 +36,11 @@
                         <mat-icon>home</mat-icon>
                         Home
                     </button>
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="navigateTienda()">
                         <mat-icon>store</mat-icon>
                         Tienda
                     </button>
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="navigateAdmin()">
                         <mat-icon>view_list</mat-icon>
                         Administracion
                     </button>

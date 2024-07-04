@@ -131,6 +131,12 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
   navigateHome() {
     this.router.navigate(['inicio']);
   }
+  navigateAdmin() {
+    this.router.navigate(['layout', 'tienda', 'admin']);
+  }
+  navigateTienda() {
+    this.router.navigate(['layout', 'tienda', 'juegos']);
+  }
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private sharedSer: SharedService,

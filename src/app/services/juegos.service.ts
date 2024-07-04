@@ -11,7 +11,7 @@ import {
 } from 'rxjs';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { backendProd, backendDev } from './../enviroments/enviroments';
-
+import { JuegoDTO2 } from '../models/juegoDTO';
 export interface JuegoDTO {
   id: number;
   nombre: string;
@@ -26,10 +26,10 @@ export interface JuegoDTO {
   providedIn: 'root',
 })
 export class JuegosService {
-  resourceUrl2 = backendProd + '/api/Juego/All';
+  resourceUrl2 = backendProd;
 
   findAll(): Observable<Juego[]> {
-    return this.http.get<any[]>(this.resourceUrl2).pipe(
+    return this.http.get<any[]>(this.resourceUrl2 + '/api/Juego/All').pipe(
       map(
         (json) =>
           json.map(
@@ -48,6 +48,15 @@ export class JuegosService {
           return throwError(() => 'paso algo');
         })
       )
+    );
+  }
+  addGame(juego: JuegoDTO2): Observable<any> {
+    return this.http.post<any>(this.resourceUrl2 + '/api/Juego', juego).pipe(
+      catchError((err) => {
+        console.log('Ocurrio un error: ');
+        console.log(err);
+        return throwError(() => 'No se pudo crear la persona');
+      })
     );
   }
 
