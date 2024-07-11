@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
+import { NgClass } from '@angular/common';
+import { Juego } from 'src/app/models/juego';
 
 @Component({
   selector: 'app-navbar',
@@ -32,6 +34,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatBadgeModule,
     MatSlideToggleModule,
     MatMenuModule,
+    NgClass,
   ],
 })
 export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
@@ -42,6 +45,9 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
   temaClaro: Boolean = true;
   checked: boolean = true;
   toggle: boolean = true;
+  pathUrl: string = '';
+  storeStyle: boolean = true;
+  adminStyle: boolean = false;
 
   ngOnInit(): void {
     if (this.dataCompra) {
@@ -92,6 +98,7 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   openDialog() {
     this.dialog.open(CarritoComponent);
+    console.log();
   }
   setTheme() {
     let moonIcon;
@@ -132,9 +139,13 @@ export class NavbarComponent implements OnInit, OnDestroy, AfterViewInit {
     this.router.navigate(['inicio']);
   }
   navigateAdmin() {
+    this.storeStyle = false;
+    this.adminStyle = true;
     this.router.navigate(['layout', 'tienda', 'admin']);
   }
   navigateTienda() {
+    this.storeStyle = true;
+    this.adminStyle = false;
     this.router.navigate(['layout', 'tienda', 'juegos']);
   }
   constructor(

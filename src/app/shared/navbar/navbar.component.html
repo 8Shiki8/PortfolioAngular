@@ -12,11 +12,11 @@
                     <mat-icon>home</mat-icon>
                     Home
                 </button>
-                <button mat-fab extended color="accent" (click)="navigateTienda()">
+                <button [ngClass]="{'buton-on': storeStyle}" mat-fab extended color="accent" (click)="navigateTienda()">
                     <mat-icon>store</mat-icon>
                     Tienda
                 </button>
-                <button mat-fab extended color="accent" (click)="navigateAdmin()">
+                <button [ngClass]="{'buton-on': adminStyle}" mat-fab extended color="accent" (click)="navigateAdmin()">
                     <mat-icon>view_list</mat-icon>
                     Administracion
                 </button>

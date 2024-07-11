@@ -21,6 +21,7 @@ import { JuegoDTO2 } from 'src/app/models/juegoDTO';
 import { JuegosService } from 'src/app/services/juegos.service';
 import { FormArray } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-administracion',
@@ -36,6 +37,7 @@ import { NgIf } from '@angular/common';
     HttpClientModule,
     MatCardModule,
     NgIf,
+    NgClass,
   ],
   templateUrl: './administracion.component.html',
   styleUrl: './administracion.component.css',
@@ -47,7 +49,7 @@ export class AdministracionComponent implements OnInit {
   gameForm: FormGroup = this.fb.group({
     nombre: ['', Validators.required],
     plataforma: ['', Validators.required],
-    precio: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+    precio: ['', [Validators.required, Validators.pattern('^[0-9.]+$')]],
     categorias: ['', Validators.required],
   });
 

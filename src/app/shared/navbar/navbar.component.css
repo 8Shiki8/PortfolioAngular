@@ -1,3 +1,9 @@
+
+/*BOTONES*/
+.buton-on{
+    color:#af5d00;
+}
+
 .bi-sun-fill {
    
     animation: sunAni 0.3s 1 linear;
