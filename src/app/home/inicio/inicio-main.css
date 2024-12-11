@@ -1,4 +1,43 @@
 
+
+ 
+.example{
+    
+    width: 250px;
+    height: 250px;
+    color:white;
+    background: #363636;
+    position: relative;
+    border-radius: 10px;
+    
+    
+
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.example::after,.example::before{
+
+    content:'';
+    height: 100%;
+    width: 100%;
+    background-image:conic-gradient(from var(--angle),#ff9100, #00ff40, #00a2ff, #f800cf, #ff9100);
+    position: absolute !important;
+    top:  50%;
+    left: 50%;
+    translate: -50%  -50%;
+    z-index: -1;
+    padding: 126px;
+    border-radius: 10px;
+    animation: 3s spin linear  infinite;
+}
+.example::before{
+    filter:blur(5px)
+}
+
 .hero-container {
     width: 100vw;
     overflow-x: hidden;
@@ -112,11 +151,25 @@ h1.textTitle{
     position: relative;
     margin: 40px;
     border-radius: 20px;
-    background-color: #414141 !important;
+    background: #414141 ;
     padding: 10px;
 }
+.info-wrapper::after, .info-wrapper::before{
+    content: "";
+    position: absolute;
+    height: 102%;
+    width: 102%;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-image: conic-gradient( #ff9100,#00ff40,#00a2ff,#f800cf,#ff9100);
+    z-index:-1;
+    border-radius: 20px;
 
-
+}
+.info-wrapper::before{
+    filter:blur(10px)
+}
 .info-text>img {
     border-radius: 20px;
     object-fit: scale-down;
@@ -171,3 +224,4 @@ main{
 .carousel-responsive{
     display:none;
 }
+

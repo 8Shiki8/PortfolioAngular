@@ -21,6 +21,16 @@
     }
 
 }
+@keyframes spin {
+    0% {
+        --angle: 0deg;
+    }
+
+    100% {
+        --angle: 360deg;
+    }
+
+}
 
 @media(max-width:768px) {
     .portrait {
